@@ -18,7 +18,7 @@ function calculate(element) {
 				headingElement.innerText = headingElement.innerText.slice(0, -1);
 			}
 		} else if (val === "=") {
-			headingElement.innerText = eval(headingElement.innerText);
+			headingElement.innerText = eval(headingElement.innerText).toFixed(2);
 		} else if ((val >= 0 && val <= 9) || val === ".") {
 			let displayVal = headingElement.innerText;
 			if (displayVal === "0") {
