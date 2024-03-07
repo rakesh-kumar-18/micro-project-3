@@ -18,7 +18,8 @@ function calculate(element) {
 				headingElement.innerText = headingElement.innerText.slice(0, -1);
 			}
 		} else if (val === "=") {
-			headingElement.innerText = eval(headingElement.innerText).toFixed(2);
+			let ans = eval(headingElement.innerText);
+			headingElement.innerText = ans % 1 !== 0 ? ans.toFixed(2) : ans;
 		} else if ((val >= 0 && val <= 9) || val === ".") {
 			let displayVal = headingElement.innerText;
 			if (displayVal === "0") {
